@@ -10,29 +10,29 @@ const metrics = [
   {
     label: "Portfolio Yield",
     icon: CircleDollarSign,
-    color: "text-violet-500",
-    bgColor: "bg-violet-500/10",
+    color: "text-blue-600",
+    bgColor: "bg-blue-500/10",
     value: "2.45%"
   },
   {
     label: "Yield On Cost",
     icon: DollarSign,
-    color: "text-emerald-500",
-    bgColor: "bg-emerald-500/10",
+    color: "text-blue-600",
+    bgColor: "bg-blue-600/10",
     value: "3.24%"
   },
   {
     label: "Annual Income",
     icon: Banknote,
-    color: "text-pink-700",
-    bgColor: "bg-pink-700/10",
+    color: "text-blue-600",
+    bgColor: "bg-blue-600/10",
     value: "$11,000"
   },
   {
     label: "Portfolio Beta",
     icon: LineChart,
-    color: "text-orange-700",
-    bgColor: "bg-orange-700/10",
+    color: "text-blue-600",
+    bgColor: "bg-blue-600/10",
     value: "0.9"
   },
 ]
@@ -100,47 +100,47 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className='border overflow-x-auto rounded-md flex m-4'>
-        <table className='table-auto overflow-scroll'>
+      <div className='border overflow-x-auto rounded-md flex text-center align-middle justify-center m-auto'>
+        <table className='table-auto overflow-scroll text-sm'>
           <thead className='bg-slate-200'>
             <tr>
-              <th>Ticker</th>
-              <th>Shares</th>
-              <th>Price</th>
-              <th>Change</th>
-              <th>Average Cost</th>
-              <th>Profit Loss</th>
-              <th>Dividend Yield</th>
-              <th>Yield on Cost</th>
-              <th>Annual Income</th>
-              <th>Dividend Safety</th>
+              <th className='w-full'>Ticker</th>
+              <th className='w-full'>Shares</th>
+              <th className='w-full'>Price</th>
+              <th className='w-full'>Change</th>
+              <th className='w-full'>Average Cost</th>
+              <th className='w-full'>Profit Loss</th>
+              <th className='w-full'>Dividend Yield</th>
+              <th className='w-full'>Yield on Cost</th>
+              <th className='w-full'>Annual Income</th>
+              <th className='w-full'>Dividend Safety</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>
+            <tr className='border-t'>
+              <td className='w-full'>
                 <div>
                   <p className='text-blue-600'>AAPL</p>
                   <p>Apple Inc</p>
                 </div>
               </td>
-              <td>500</td>
-              <td>$170.65</td>
-              <td>
+              <td className='w-full'>500</td>
+              <td className='w-full'>$170.65</td>
+              <td className='w-full'>
                 <div className='flex'>
                   <p className={`text-red-400`}>$-0.92</p>
-                  <p className={`text-red-400 p-1 ml-2 bg-red-200 rounded-md text-xs`}>-0.52%</p>
+                  <p className={`text-red-400 p-[0.15rem] ml-1 bg-red-200 rounded-md text-[9px]`}>-0.52%</p>
                 </div>
               </td>
-              <td>$125.17</td>
+              <td className='w-full'>$125.17</td>
               <td className={`text-green-400`}>$25,740.00</td>
               <td>0.54%</td>
               <td>0.77%</td>
               <td>$480.00</td>
-              <td className='text-blue-600'>{<LockIcon className='w-[25px] h-[25px] p-1 bg-blue-200 rounded-xl' />}</td>
+              <td className='text-blue-600'>{<LockIcon className='m-auto w-[25px] h-[25px] p-1 bg-blue-200 rounded-xl' />}</td>
             </tr>
 
-            <tr>
+            <tr className='border-t'>
               <td>
                 <div>
                   <p className='text-blue-600'>MMM</p>
@@ -152,7 +152,7 @@ const Dashboard = () => {
               <td>
                 <div className='flex'>
                   <p className={`text-green-400`}>$1.55</p>
-                  <p className={`text-green-400 p-1 ml-2 bg-green-200 rounded-md text-xs`}>1.65%</p>
+                  <p className={`text-green-400 p-[0.15rem] ml-1 bg-green-200 rounded-md text-[9px]`}>1.65%</p>
                 </div>
               </td>
               <td>$68.45</td>
@@ -160,14 +160,14 @@ const Dashboard = () => {
               <td>6.39%</td>
               <td>8.77%</td>
               <td>$6000.00</td>
-              <td className='text-blue-600'>{<LockIcon className='w-[25px] h-[25px] p-1 bg-blue-200 rounded-xl' />}</td>
+              <td className='text-blue-600'>{<LockIcon className='m-auto w-[25px] h-[25px] p-1 bg-blue-200 rounded-xl' />}</td>
             </tr>
 
-            <tr>
+            <tr className='border-t'>
               <td>
                 <div>
                   <p className='text-blue-600'>SBUX</p>
-                  <p>Starbucks Corp.c</p>
+                  <p>Starbucks Corp.</p>
                 </div>
               </td>
               <td>100</td>
@@ -175,7 +175,7 @@ const Dashboard = () => {
               <td>
                 <div className='flex'>
                   <p className={`text-green-400`}>$2.64</p>
-                  <p className={`text-green-400 p-1 ml-2 bg-green-200 rounded-md text-xs`}>2.57%</p>
+                  <p className={`text-green-400 p-[0.15rem] ml-1 bg-green-200 rounded-md text-[9px]`}>2.57%</p>
                 </div>
               </td>
               <td>$66.73</td>
@@ -183,7 +183,7 @@ const Dashboard = () => {
               <td>2.22%</td>
               <td>3.42%</td>
               <td>$228.00</td>
-              <td className='text-blue-600'>{<LockIcon className='w-[25px] h-[25px] p-1 bg-blue-200 rounded-xl' />}</td>
+              <td className='text-blue-600'>{<LockIcon className='m-auto w-[25px] h-[25px] p-1 bg-blue-200 rounded-xl' />}</td>
             </tr>
           </tbody>
         </table>
